@@ -280,16 +280,16 @@ import SwiftUI
 //}
 
 // 교재 p.78, chapter 02_1 p.36, weight
-struct ContentView: View {
-    var body: some View {
-        HStack(spacing:30) {
-            Image(systemName: "arrow.up").font(Font.title.weight(.black))
-            Image(systemName: "arrow.left").font(Font.title.weight(.semibold))
-            Image(systemName: "arrow.down").font(Font.title.weight(.light))
-            Image(systemName: "arrow.right").font(Font.title.weight(.ultraLight))
-        }
-    }
-}
+//struct ContentView: View {
+//    var body: some View {
+//        HStack(spacing:30) {
+//            Image(systemName: "arrow.up").font(Font.title.weight(.black))
+//            Image(systemName: "arrow.left").font(Font.title.weight(.semibold))
+//            Image(systemName: "arrow.down").font(Font.title.weight(.light))
+//            Image(systemName: "arrow.right").font(Font.title.weight(.ultraLight))
+//        }
+//    }
+//}
 
 // 교재 p.80, chapter 02_1 p.38, 스택
 //
@@ -500,7 +500,7 @@ struct ContentView: View {
 // 스택 내 다른 요소와 함께 포함된 경우 - VStack, ZStack
 //struct ContentView: View {
 //    var body: some View {
-//        VStack {    // VStack, ZStack을 비교
+//        ZStack {    // VStack, ZStack을 비교
 //            Spacer()
 //            Text("Spacer").font(.title).background(Color.yellow)
 //        }
@@ -528,12 +528,12 @@ struct ContentView: View {
 //struct ContentView: View {
 //    var body: some View {
 //        ZStack {
-//            Color.clear
-//            // or Rectangle()
-//            // or Rectangle().opacity(0)
+//            //Color.clear
+//            //Rectangle()
+//            Rectangle().opacity(0)
 //            Text("Spacer").font(.title).background(Color.yellow)
 //        }
-//        .background(Color.mint)
+//        .background(Color.white)
 //    }
 //}
 
@@ -696,7 +696,7 @@ struct ContentView: View {
 //    var body: some View {
 //        Rectangle().fill(.green).frame(width: 150, height: 150)
 //            .overlay(                       // 초록색 사각형 위로 뷰 추가
-//                Rectangle().fill(.yellow)   // 크기를 정해 주지 않으면 초록색 사각형과 동일 크기
+//                Rectangle().fill(.yellow).frame(width: 100, height: 100, alignment: .center)   // 크기를 정해 주지 않으면 초록색 사각형과 동일 크기
 //            )
 //
 //    }
@@ -709,7 +709,7 @@ struct ContentView: View {
 //    var body: some View {
 //        Rectangle().fill(.yellow).frame(width: 150, height: 150)
 //            .background(   // 노란색 사각형 아래 새로운 뷰 추가
-//                Rectangle().fill(.green)   // overlay 코드와 색이 반대가 된 것을 주목
+//                Rectangle().fill(.green).frame(width: 200, height: 200)   // overlay 코드와 색이 반대가 된 것을 주목
 //            )
 //
 //    }
@@ -738,36 +738,36 @@ struct ContentView: View {
 
 // 교재 p.103, chapter 02_1 p.70, vs ZStack
 //
-//struct ContentView: View {
-//    var body: some View {
-//        ZStack{
-//            VStack {
-//                Spacer()
-//                Image(systemName: "arrow.down").font(.title).padding()
-//            }
-//            HStack{
-//                Spacer()
-//                Image(systemName: "arrow.right").font(.title).padding()
-//            }
-//            Circle()
-//                .fill(.yellow.opacity(0.8))
-//                .frame(width: 250, height: 250)
-//            Text("Joystick").font(.largeTitle)
-//            ZStack(alignment: .topTrailing) {
-//                Color.clear
-//                Image(systemName: "arrow.up.right.circle.fill").font(.title)
-//            }
-//            VStack {
-//                Image(systemName: "arrow.up").font(.title).padding()
-//                Spacer()
-//            }
-//            HStack {
-//                Image(systemName: "arrow.left").font(.title).padding()
-//                Spacer()
-//            }
-//        }.frame(width: 250, height: 250)
-//    }
-//}
+struct ContentView: View {
+    var body: some View {
+        ZStack{
+            VStack {
+                Spacer()
+                Image(systemName: "arrow.down").font(.title).padding()
+            }
+            HStack{
+                Spacer()
+                Image(systemName: "arrow.right").font(.title).padding()
+            }
+            Circle()
+                .fill(.yellow.opacity(0.8))
+                .frame(width: 250, height: 250)
+            Text("Joystick").font(.largeTitle)
+            ZStack(alignment: .topTrailing) {
+                Color.clear
+                Image(systemName: "arrow.up.right.circle.fill").font(.title)
+            }
+            VStack {
+                Image(systemName: "arrow.up").font(.title).padding()
+                Spacer()
+            }
+            HStack {
+                Image(systemName: "arrow.left").font(.title).padding()
+                Spacer()
+            }
+        }.frame(width: 250, height: 250)
+    }
+}
 
 
 
