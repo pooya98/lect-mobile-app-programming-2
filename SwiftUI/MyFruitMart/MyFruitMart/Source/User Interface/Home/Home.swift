@@ -15,7 +15,7 @@ struct Home: View {
             Text("2017112436 강승우")
             NavigationView {
                 List(store.products) { product in
-                    NavigationLink(destination: Text("상세 정보")) {
+                    NavigationLink(destination: ProductDetailView(product: product)) {
                         ProductRow(product: product)
                     }
                 }
