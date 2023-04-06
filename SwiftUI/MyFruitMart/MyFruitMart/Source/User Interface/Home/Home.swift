@@ -13,8 +13,13 @@ struct Home: View {
     var body: some View {
         VStack{
             Text("2017112436 강승우")
-            List(store.products) {
-                product in ProductRow(product: product)
+            NavigationView {
+                List(store.products) { product in
+                    NavigationLink(destination: Text("상세 정보")) {
+                        ProductRow(product: product)
+                    }
+                }
+                .navigationBarTitle("과일마트")
             }
         }
     }
