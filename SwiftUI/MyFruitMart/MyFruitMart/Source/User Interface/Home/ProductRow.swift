@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProductRow: View {
+    
+    let product: Product
+    
     var body: some View {
         HStack{
             productImage
@@ -18,8 +21,6 @@ struct ProductRow: View {
         .cornerRadius(6)
         .shadow(color: Color.primaryShadow, radius: 1, x: 2, y: 2) .padding(.vertical, 8)
     }
-    
-    let product: Product
 }
 
 
@@ -74,6 +75,14 @@ private extension ProductRow {
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(product: productSamples[0])
+        Group {
+            ForEach(productSamples){
+                ProductRow(product: $0)
+            }
+            ProductRow(product: productSamples[0])
+                .preferredColorScheme(.dark)
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }
