@@ -10,12 +10,21 @@ import SwiftUI
 struct ProductDetailView: View {
     let product: Product
     
+    @State private var quantity: Int = 1
+    @State private var showingAlert : Bool = false
+    @State private var showingPopup: Bool = false
+    @EnvironmentObject private var store: Store
+    
     var body: some View {
         VStack(spacing: 0) {
             productImage
             orderView
         }
+        .popup(isPresented: $showingPopup) { OrderCompleteMessage()}
         .edgesIgnoringSafeArea(.top)
+        .alert(isPresented: $showingAlert) {
+            confirmAlert
+        }
     }
 }
 
@@ -24,9 +33,7 @@ private extension ProductDetailView {
     
     var productImage: some View {
         GeometryReader { _ in
-            Image(self.product.imageName)
-                .resizable()
-                .scaledToFill()
+            ResizedImage(self.product.imageName)
         }
     }
     
@@ -56,10 +63,7 @@ private extension ProductDetailView {
                 
                 Spacer()
                 
-                Image(systemName: "heart")
-                    .imageScale(.large)
-                    .foregroundColor(Color.peach)
-                    .frame(width: 32, height: 32)
+                FavoriteButton(product: product)
             }
             
             Text(splitText(product.description))
@@ -69,17 +73,22 @@ private extension ProductDetailView {
     }
     
     var priceInfo: some View {
-        HStack {
+        let price = quantity * product.price
+        
+        return HStack {
             (Text("₩")
-             + Text("\(product.price)").font(.title)
+             + Text("\(price)").font(.title)
             ).fontWeight(.medium)
             Spacer()
+            QuantitySelector(quantity: $quantity)
         }
         .foregroundColor(.black)
     }
     
     var placeOrderButton: some View {
-        Button(action: { }) {
+        Button(action: {
+            self.showingAlert = true
+        }) {
             Capsule()
                 .fill(Color.peach)
                 .frame(maxWidth: .infinity, minHeight: 30, maxHeight: 55)
@@ -90,6 +99,15 @@ private extension ProductDetailView {
         }
     }
     
+    var confirmAlert: Alert {
+        Alert(title: Text("주문 확인"),
+              message: Text("\(product.name)을(를) \(quantity)개 구매하겠습니까?"),
+              primaryButton: .default(Text("확인"), action: {
+            self.placeOrder()
+        }),
+              secondaryButton: .cancel(Text("취소"))
+        )
+    }
     
     func splitText(_ text: String) -> String {
         guard !text.isEmpty else { return text }
@@ -102,7 +120,14 @@ private extension ProductDetailView {
         let rhsString = text[afterSpaceIdx...].trimmingCharacters(in: .whitespaces)
         return String(lhsString + "\n" + rhsString)
     }
+    
+    func placeOrder() {
+        store.placeOrder(product: product, quantity: quantity)
+        showingPopup = true
+    }
+    
 }
+
 
 
 

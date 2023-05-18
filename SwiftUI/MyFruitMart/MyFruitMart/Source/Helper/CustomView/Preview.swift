@@ -42,6 +42,6 @@ struct Preview<V: View>: View {
 
 struct Preview_Previews: PreviewProvider {
     static var previews: some View {
-        Preview(source: Home(store: Store())) // 프리뷰에서 표현할 뷰를 전달
+        Preview(source: Home().environmentObject(Store())) // 프리뷰에서 표현할 뷰를 전달
     }
 }

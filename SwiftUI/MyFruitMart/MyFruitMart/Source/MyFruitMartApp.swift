@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct MyFruitMartApp: App {
+    
     var body: some Scene {
-        WindowGroup {
-            Home(store: Store())
+        configurationAppearance()
+        return WindowGroup {
+            //Home(store: Store())
+            Home()
+                .accentColor(Color.primary)
+                .environmentObject(Store())
         }
+        
+    }
+    
+    private func configurationAppearance() {
+    // large 디스플레이 모드에서 적용
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "peach")!]
+        // inline 디스플레이 모드일 때 적용
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "peach")!]
     }
 }

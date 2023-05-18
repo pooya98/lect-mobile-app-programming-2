@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8215B3F129FB63DA00B695FC /* QuantitySelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215B3F029FB63DA00B695FC /* QuantitySelector.swift */; };
+		8215B3F329FB6EAE00B695FC /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8215B3F229FB6EAE00B695FC /* FavoriteButton.swift */; };
+		822C94DE29FB73760096437E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822C94DD29FB73760096437E /* Order.swift */; };
+		8243E3EC2A0DE5130020ED79 /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243E3EB2A0DE5130020ED79 /* Symbol.swift */; };
+		8243E3EE2A0DE7800020ED79 /* ResizedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243E3ED2A0DE7800020ED79 /* ResizedImage.swift */; };
+		8243E3F12A0DEC810020ED79 /* ShrinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8243E3F02A0DEC810020ED79 /* ShrinkButtonStyle.swift */; };
 		8248217429C40EAA00EDBFFD /* MyFruitMartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248217329C40EAA00EDBFFD /* MyFruitMartApp.swift */; };
 		8248217629C40EAA00EDBFFD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248217529C40EAA00EDBFFD /* Home.swift */; };
 		8248217829C40EAB00EDBFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8248217729C40EAB00EDBFFD /* Assets.xcassets */; };
@@ -17,11 +23,19 @@
 		82940E7529DF04FF000DEB11 /* ProductData.json in Resources */ = {isa = PBXBuildFile; fileRef = 82940E7429DF04FF000DEB11 /* ProductData.json */; };
 		82940E7729DF053A000DEB11 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82940E7629DF053A000DEB11 /* BundleExtension.swift */; };
 		82940E7929DF0983000DEB11 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82940E7829DF0983000DEB11 /* ProductDetailView.swift */; };
+		82A84B4D2A163635000735B0 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A84B4C2A163635000735B0 /* Popup.swift */; };
+		82A84B512A163C2A000735B0 /* OrderCompleteMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A84B502A163C2A000735B0 /* OrderCompleteMessage.swift */; };
 		82E26D3C29CD408C0012FD60 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E26D3B29CD408C0012FD60 /* ColorExtension.swift */; };
 		82E26D3F29CD44520012FD60 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E26D3E29CD44520012FD60 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8215B3F029FB63DA00B695FC /* QuantitySelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelector.swift; sourceTree = "<group>"; };
+		8215B3F229FB6EAE00B695FC /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		822C94DD29FB73760096437E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		8243E3EB2A0DE5130020ED79 /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
+		8243E3ED2A0DE7800020ED79 /* ResizedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizedImage.swift; sourceTree = "<group>"; };
+		8243E3F02A0DEC810020ED79 /* ShrinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkButtonStyle.swift; sourceTree = "<group>"; };
 		8248217029C40EAA00EDBFFD /* MyFruitMart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFruitMart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8248217329C40EAA00EDBFFD /* MyFruitMartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFruitMartApp.swift; sourceTree = "<group>"; };
 		8248217529C40EAA00EDBFFD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -33,6 +47,8 @@
 		82940E7429DF04FF000DEB11 /* ProductData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductData.json; sourceTree = "<group>"; };
 		82940E7629DF053A000DEB11 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		82940E7829DF0983000DEB11 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		82A84B4C2A163635000735B0 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		82A84B502A163C2A000735B0 /* OrderCompleteMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteMessage.swift; sourceTree = "<group>"; };
 		82E26D3B29CD408C0012FD60 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		82E26D3E29CD44520012FD60 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8243E3EF2A0DEC610020ED79 /* CustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				8243E3F02A0DEC810020ED79 /* ShrinkButtonStyle.swift */,
+			);
+			path = CustomStyle;
+			sourceTree = "<group>";
+		};
 		8248216729C40EAA00EDBFFD = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +119,18 @@
 			isa = PBXGroup;
 			children = (
 				8284718929DFC5740008F6FD /* Preview.swift */,
+				8243E3EB2A0DE5130020ED79 /* Symbol.swift */,
+				8243E3ED2A0DE7800020ED79 /* ResizedImage.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		82A84B4B2A1635F7000735B0 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				82A84B4C2A163635000735B0 /* Popup.swift */,
+			);
+			path = ViewModifier;
 			sourceTree = "<group>";
 		};
 		82B3788129DC89D300996B88 /* User Interface */ = {
@@ -113,6 +147,9 @@
 				8248217529C40EAA00EDBFFD /* Home.swift */,
 				82940E6E29DEE94C000DEB11 /* ProductRow.swift */,
 				82940E7829DF0983000DEB11 /* ProductDetailView.swift */,
+				8215B3F029FB63DA00B695FC /* QuantitySelector.swift */,
+				8215B3F229FB6EAE00B695FC /* FavoriteButton.swift */,
+				82A84B502A163C2A000735B0 /* OrderCompleteMessage.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -131,8 +168,10 @@
 		82E26D3929CD406E0012FD60 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8284718729DFC5490008F6FD /* CustomView */,
 				82E26D3A29CD40750012FD60 /* Extension */,
+				8243E3EF2A0DEC610020ED79 /* CustomStyle */,
+				8284718729DFC5490008F6FD /* CustomView */,
+				82A84B4B2A1635F7000735B0 /* ViewModifier */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -151,6 +190,7 @@
 			children = (
 				82E26D3E29CD44520012FD60 /* Product.swift */,
 				82940E7229DEF5D2000DEB11 /* Store.swift */,
+				822C94DD29FB73760096437E /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,10 +270,18 @@
 				82940E7929DF0983000DEB11 /* ProductDetailView.swift in Sources */,
 				8248217629C40EAA00EDBFFD /* Home.swift in Sources */,
 				8248217429C40EAA00EDBFFD /* MyFruitMartApp.swift in Sources */,
+				82A84B512A163C2A000735B0 /* OrderCompleteMessage.swift in Sources */,
 				82940E7729DF053A000DEB11 /* BundleExtension.swift in Sources */,
+				8243E3EC2A0DE5130020ED79 /* Symbol.swift in Sources */,
 				82940E6F29DEE94C000DEB11 /* ProductRow.swift in Sources */,
+				822C94DE29FB73760096437E /* Order.swift in Sources */,
+				8243E3EE2A0DE7800020ED79 /* ResizedImage.swift in Sources */,
 				82E26D3F29CD44520012FD60 /* Product.swift in Sources */,
+				82A84B4D2A163635000735B0 /* Popup.swift in Sources */,
+				8215B3F129FB63DA00B695FC /* QuantitySelector.swift in Sources */,
 				8284718A29DFC5740008F6FD /* Preview.swift in Sources */,
+				8215B3F329FB6EAE00B695FC /* FavoriteButton.swift in Sources */,
+				8243E3F12A0DEC810020ED79 /* ShrinkButtonStyle.swift in Sources */,
 				82E26D3C29CD408C0012FD60 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
