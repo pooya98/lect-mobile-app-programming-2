@@ -14,11 +14,10 @@ struct MyFruitMartApp: App {
         configurationAppearance()
         return WindowGroup {
             //Home(store: Store())
-            Home()
+            MainTabView()
                 .accentColor(Color.primary)
                 .environmentObject(Store())
         }
-        
     }
     
     private func configurationAppearance() {

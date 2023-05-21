@@ -42,7 +42,8 @@ struct Popup<Message: View>: ViewModifier { // ViewModifier 프로토콜 채택
                 .cornerRadius(12)
                 .shadow(color: .primaryShadow, radius: 15, x: 5, y: 5) .overlay(self.checkCircleMark, alignment: .top)
                 .position(x: $0.size.width/2, y: $0.size.height/2) // (4) 팝업창 위치 - 부모뷰의 중앙
-        } }
+        }
+    }
     // 팝업창 상단에 위치한 체크 마크 심벌
     private var checkCircleMark: some View {
         Symbol("checkmark.circle.fill", color: .peach)
